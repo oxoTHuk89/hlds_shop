@@ -7,8 +7,7 @@ $database = "";
 try {
 	$dbh = new PDO('mysql:host='.$host.';dbname='.$database, $user, $password);
 	$dbh->query("SET NAMES utf8");
-}
-catch (PDOException $e) {
+} catch (PDOException $e) {
     print "Error!: " . $e->getMessage() . "<br/>";
     die();
 }
@@ -27,4 +26,3 @@ $cmd = "amx_reloadadmins"; //Команда, посылаемая на серв�
 
 //Sucsess
 $url = "http://g-nation.ru/index.php?/topic/367-faq-po-magazinu/#entry3715";
-?>
